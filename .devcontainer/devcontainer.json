@@ -1,5 +1,5 @@
 {
-  "name": "OpenSD2026 Workshop",
+  "name": "OMA EMShip Workshop",
 
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
 
