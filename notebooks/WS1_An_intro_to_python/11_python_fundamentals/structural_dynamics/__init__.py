@@ -1,1 +1,0 @@
-from .sdof import SDOFSystem
