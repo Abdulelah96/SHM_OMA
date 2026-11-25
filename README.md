@@ -1,45 +1,71 @@
-[![OpenSD2026 - Belgium](assets/OpenSD_bannerlogo.jpg)](https://www.vub.be/en/event/opensd-summer-school-belgium)
+# OMA Workshop
 
-# Workshop_OpenSD2026
+This repository contains materials for the Operational Modal Analysis (OMA) Workshop, focusing on signal processing and its application to offshore wind turbines.
 
-Repository containing the materials for the OpenSD2026 Workshop in Belgium, providing a hands-on introduction to Python programming for structural dynamics.
+Participants will learn how to:
 
-Workshop page: https://www.vub.be/en/event/opensd-summer-school-belgium
+- Preprocess and analyze structural acceleration signals
 
-## Repository layout
+- Apply key signal-processing techniques (PSD, etc.)
 
-- `notebooks/` workshop notebooks and exercises:
-  - `WS0_Introduction/`
-  - `WS1_An_intro_to_python/`
-  - `WS2_Signal_processing_for_SHM/`
-  - `WS3_Intro_to_pyFatigue/`
-  - `WS4_AI_for_SHM/`
-- `assets/` images and workshop assets
+- Perform Operational Modal Analysis (OMA)
 
-## Working on the workshop
+- Interpret mode shapes and damping from real turbine data
 
-There are two main ways to use the workshop materials:
+The dataset includes measurements collected from offshore wind turbines under three operational states:
 
-- **GitHub Codespaces** (recommended during the workshop): ready-to-use development environment in the browser.
-- **Local installation**: clone the repository and run everything on your own machine.
+- Parked (idling)
 
-## Dependency management with uv
+- Rotor-stop
 
-This repository uses [uv](https://docs.astral.sh/uv/) to manage Python dependencies:
+- Rated operation
 
-```bash
-uv sync
-uv run jupyter lab
-```
+These conditions provide a rich basis for comparing modal behavior under different aerodynamic and structural loading.
 
-## Testing with pytest
+The workshop notebook can be opened on Binder 
 
-Tests are located in `notebooks/WS1_An_intro_to_python/12_test_driven_dev/tests`. Run them with:
+##  Running on Codespace
 
-```bash
-uv run pytest
-```
+You can explore and run each notebook interactively using Github **Codepace**, without installing anything locally. Follow theses steps to lunch the workshop.
 
-## License
+1. You must have an account in GitHub (follow this video on how to create a GitHub account: https://www.youtube.com/watch?si=pOlW7sbAOR-mG74x&v=h5cKAd94QNo&feature=youtu.be)
+2. Click on the green button <> Code --> Codespaces --> Create codespace on main
+3. You will see a new window opens. Wait few seconds. Click Trust folder and continue. Wait for the python environment to setup.
 
-Copyright © 2026 OpenSD2026 contributors. All rights reserved. The materials in this repository are provided for educational use only and may not be copied, redistributed, or modified without prior permission. See [LICENSE](LICENSE).
+
+
+
+<!-- ### **2️⃣ Load Processing**
+
+This notebook covers preprocessing and conditioning of SCADA or simulation load data for fatigue analysis.
+
+[![Launch Load Processing Notebook](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OWI-Lab/FIRMEST_fatigue_assessment_workshop/main?filepath=Notebooks/2.Load_Processing.ipynb)
+
+
+
+### **3️⃣ Fatigue Assessment**
+
+This notebook performs the fatigue analysis using processed load data and stress cycle counting.
+
+[![Launch Fatigue Assessment Notebook](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OWI-Lab/FIRMEST_fatigue_assessment_workshop/main?filepath=Notebooks/3.Fatigue_Assessment.ipynb)
+
+
+---
+
+### 🧠 Notes
+
+- All three notebooks share the same environment defined in `.binder/environment.yml`.  
+- Data files (`.pkl`, `.gz`, etc.) stored in the `Notebooks/` folder are automatically available when launched on Binder.  
+- You can also download the notebooks and run them locally if you prefer.
+
+---
+
+### ✅ Quick Reference
+
+| Notebook | Purpose | Binder Link |
+|-----------|----------|--------------|
+| 1️⃣ 1.Geometry_Resistance_OWIMetaDataBase.ipynb | Explore geometry & resistance metadata | [Open](https://mybinder.org/v2/gh/OWI-Lab/FIRMEST_fatigue_assessment_workshop/main?filepath=Notebooks/1.Geometry_Resistance_OWIMetaDataBase.ipynb) |
+| 2️⃣ 2.Load_Processing.ipynb | Process SCADA/load data | [Open](https://mybinder.org/v2/gh/OWI-Lab/FIRMEST_fatigue_assessment_workshop/main?filepath=Notebooks/2.Load_Processing.ipynb) |
+| 3️⃣ 3.Fatigue_Assessment.ipynb | Perform fatigue analysis | [Open](https://mybinder.org/v2/gh/OWI-Lab/FIRMEST_fatigue_assessment_workshop/main?filepath=Notebooks/3.Fatigue_Assessment.ipynb) |
+
+--- -->
